@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MobilVet", ".", "{A9524AF7-3FD2-4019-8EEB-DE67EC693E8B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/MobilVet"
+		Debug.AspNetCompiler.PhysicalPath = "..\MobilVet\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\MobilVet\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/MobilVet"
+		Release.AspNetCompiler.PhysicalPath = "..\MobilVet\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\MobilVet\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "12971"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9524AF7-3FD2-4019-8EEB-DE67EC693E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9524AF7-3FD2-4019-8EEB-DE67EC693E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

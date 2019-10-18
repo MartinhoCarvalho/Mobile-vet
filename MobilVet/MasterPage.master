@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head id="Head1" runat="server">
+    <title>MobilVet</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <form id="Form1" runat="server" dir="ltr">
+
+        <div id="page">
+
+            <!-- Header -->
+
+            <header id="header">
+
+                <div id="logo">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagens/images.png" Height="150" Width="150" />
+                </div>
+                <div id="title">MobilVet</div>
+
+                <div id="sidebar">
+
+                    <asp:LoginName ID="LoginName1" runat="server" FormatString="Bem vindo, {0}" />
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="RedirectToLoginPage" LogoutPageUrl="~/MenuNavegacao/Login.aspx" />
+                </div>
+                <%--Fim Sidebar--%>
+            </header>
+            <!-- Fim Header -->
+
+            <!-- Nav -->
+            <nav id="nav">
+                <asp:Menu ID="headerMenuNavigation" runat="server" CssClass="topmenu" SkipLinkText="" EnableViewState="false" IncludeStyleBlock="false"
+                    Orientation="Horizontal" StaticSelectedStyle-BackColor="Red" OnMenuItemClick="headerMenuNavigation_MenuItemClick">
+                    <DynamicSelectedStyle BackColor="#CC0000" />
+                    <Items>
+                        <%--########################################################  --%>
+                        <%--#                   Menu de Navegação                  #  --%>
+                        <%--########################################################  --%>
+
+                        <asp:MenuItem NavigateUrl="~/MenuNavegacao/Home.aspx" Text="Home" />
+                        <asp:MenuItem NavigateUrl="~/MenuNavegacao/Clinica.aspx" Text="Clínica" />
+
+                        <%--#                  Cliente                 #  --%>
+                        <asp:MenuItem Text="Cliente">
+                            <asp:MenuItem NavigateUrl="~/MenuNavegacao/Clientes/Animais/Clientes_Animais.aspx" Text="Animais" />
+                            <asp:MenuItem NavigateUrl="~/MenuNavegacao/Clientes/Consultas/Clientes_Consulta.aspx" Text="Consulta" />
+                            <asp:MenuItem NavigateUrl="~/MenuNavegacao/Clientes/Perfil.aspx" Text="Perfil" />
+                        </asp:MenuItem>
+
+                        <%--#                   Veterinário                  #  --%>
+                        <asp:MenuItem Text="Veterinário">
+                            <asp:MenuItem Text="Perfil" NavigateUrl="~/MenuNavegacao/Veterinario/Perfil/Perfil.aspx" />
+                            <asp:MenuItem Text="Consultas" NavigateUrl="~/MenuNavegacao/Veterinario/Consultas/medico_consutas.aspx" />
+                            <asp:MenuItem Text="Pesquisar Animais" NavigateUrl="~/MenuNavegacao/Veterinario/Pesquisar/Pesquisar_Receitas.aspx" />
+                            <asp:MenuItem Text="Pesquisar Medicamentos" NavigateUrl="~/MenuNavegacao/Veterinario/Pesquisar/Pesquisar_Medicamentos.aspx" />
+                            <asp:MenuItem Text="Medicamentos" NavigateUrl="~/MenuNavegacao/Veterinario/Medicamentos/Medicamentos.aspx" />
+                        </asp:MenuItem>
+                        <%--#                   Veterinário                  #  --%>
+
+                        <asp:MenuItem NavigateUrl="~/MenuNavegacao/Horarios.aspx" Text="Horários" />
+                        <asp:MenuItem NavigateUrl="~/MenuNavegacao/Contactos.aspx" Text="Contactos" />
+                    </Items>
+
+                    <StaticSelectedStyle BackColor="Red"></StaticSelectedStyle>
+                </asp:Menu>
+            </nav>
+            <!-- Fim Nav -->
+
+
+
+
+
+            <!-- Main -->
+            <div id="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+
+
+            </div>
+            <!-- Fim Main -->
+
+            <!-- Footer -->
+            <footer id="footer">
+
+                <p>
+                    Martinho Carvalho & Filipe Santos&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                            MobilVet @2015
+                </p>
+                <div id="technical"></div>
+
+            </footer>
+            <!-- Fim Footer -->
+
+        </div>
+        <!-- Fim Page -->
+
+
+    </form>
+    <!-- Fim Form1 -->
+</body>
+
+</html>
